@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+:root{
+    --btn-color:#e58f00;
+    --about-sec:#1d1d23;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+.header{
+    padding: 1rem 10%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #1d1d23;
+}
+.logo img{
+    width: 60px;
+}
+.navbar a{
+    color: white;
+    margin: 0.5rem;
+    padding: 2.5rem;
+    font-size: 1.5rem;
+}
+.navbar a:hover{
+    color: var(--btn-color);
+}
+.icons div{
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    display: none;
+}
+.icons div:hover{
+    cursor: pointer;
+}
+
+.icons a{
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid orange;
+    border-radius: 10px;
+    font-size: 18px;
+   transition: 0.5s;
+   display: inline-block;
+}
+.contact-btn:hover{
+    transform: scale(1.1);
+    background: var(--btn-color);
+    border: 1px solid white;
+}
+
+.navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* design for home section */
+
+#home{
+    padding: 1rem 7%;
+    background:  linear-gradient(rgba(2, 5, 16, 0.7),rgba(2, 5, 16, 0.7)),url(images/bckgrnd.jpg);
+    min-height: 100vh;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 150px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.home-text-content h1{
+    font-size: 55px;
+    color: #e58f00;
+}
+
+.about{
+    padding: 2rem 7%;
+    background: var(--about-sec);
+}
+.main-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+.about-content{
+    flex: 1 1 45rem;
+}
+.about-inner-content{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.about-content .about-inner-content img{
+    width: 80%;
+    margin-left: 100px;
+}
+.about-text-content{
+    padding: 0 4rem;
+}
+.about-text-content h1{
+    color: #e58f00;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.about-text-content p{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 35px;
+}
+#recipes{
+    background-color: #1d1d23;
+    padding: 0%;
+    margin: 0%;
+}
+.card-row {
+        display: flex;
+        justify-content: space-evenly; 
+        padding: 20px;
+        background-color: #1d1d23;
+}
+.card {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        border-radius: 20px;
+        border: 2px solid #e58f00;
+}
+.perfect:hover .card {
+        cursor: pointer;
+        transform: rotateY(180deg);
+}
+.card-front, .card-back{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        color: #e58f00;
+        backface-visibility: hidden;
+}
+.card-front{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(29, 28, 28);
+        background-size: cover;
+        object-fit: cover;
+        border-radius: 18px;
+}
+.card-front img{
+        width: 190px;
+        height: 190px;
+        margin-left: 17%;
+        object-fit: cover;
+        border-radius: 15px;
+}
+.card-back {
+        background-color: #3c3c41;
+        border-radius: 18px;
+        transform: rotateY(180deg);
+        width: 100%;
+        height: 100%; 
+        display: flex;
+        flex-direction: column;
+}
+.card-back p{
+        font-weight: bold;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        padding-top: 20%;
+        padding-left: 10px;
+        padding-right: 10px;
+}
+.card-front h1{
+        color: #e58f00;
+        text-align: center;
+        margin: 23px;
+        font-size: 25px;
+}
+.card-back .btn{
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        font-weight: 300px;
+        background-color: rgb(29, 28, 28);
+        width: 160px;
+        padding: 10px;
+        margin-top: auto;
+        margin-left: 19%;
+        margin-bottom: 30px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        border-radius: 10px; 
+        cursor: pointer;
+        border-color: #e58f00;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        transition-duration: 0.3s;
+}
+.card-back a:hover, .card-back a:focus, .card-back a:active{
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        transform: scale(1.1);
+    
+}
+.heading{
+        padding-top: 30%;
+        padding-bottom: 10%;
+        text-align: center;
+        color: #e58f00;
+}
+.heading2{
+        text-align: center;
+        color: #e58f00;
+        padding: 10%;
+}
+.heading3{
+        text-align: center;
+        padding: 10%;
+        color: #e58f00;
+}
+.common{
+        font-size: 30px;
+        font-family: "kalam", sans-serif;
+        text-transform: uppercase;
+    }
+
+    .footer{
+        background: #373741;
+        padding: 2rem 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        
+    
+    }
+    .main-footer{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .main-footer img{
+        width: 100px;
+    }
+    .footer-navbar{
+        margin-top: 45px;
+    }
+    .footer-navbar a{
+        color: #e58f00;
+        font-size: 18px;
+        margin: 1rem;
+        padding: 1rem;
+    }
